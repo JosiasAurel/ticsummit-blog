@@ -19,6 +19,10 @@
   align-items: center;
 }
 
+@media screen and (max-width: 500px) {
+  .post { width: 95%; }
+}
+
 .postMain img {
   width: 100%;
 }
