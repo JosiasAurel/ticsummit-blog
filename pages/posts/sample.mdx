@@ -1,0 +1,94 @@
+import BlogHead from "../../components/BlogHead";
+ 
+export const title = "Object Oriented Paradigm";
+export const description = "Everything is an object.";
+export const date = "Friday, May 27, 2022";
+export const num = 2;
+
+<BlogHead title={title} description={description} date={date} />
+ 
+_Everything is an Object_
+ 
+The object-Oriented Paradigm is a style of programming in which everything is considered to be an object.
+An object here is an instance of a class that holds data and methods to mutate/modify the data held by the object and hence, the object's state.
+ 
+Before we begin to take a deep look, let us understand some terms related to this paradigm.
+ 
+## Classes and Objects
+ 
+You can think of a _class_ as a general view of a group of items.
+ 
+An item belonging to a group is considered an _object_. An object is an instance of a class i.e a specific implementation.
+ 
+Each group of items has something peculiar about them.
+ 
+For example, consider _Fruits_.
+We know every fruit will have a _taste_, _color_, _shape_, etc. We then have pineapples, watermelon which is all
+specific examples of fruits.
+You can think of _Fruits_ as being a general description/blueprint upon which every other fruit builds.
+Watermelon and pineapples could also be seen as objects of the class _Fruit_.
+ 
+Every object has a property and attribute. These properties and attributes can be thought of as key-value pairs holding data about
+an object.
+ 
+## Methods
+ 
+Methods are functions that are attached to a class.
+These sorts of functions can only be called on instances of that class except for _static methods_ which can be called from the class itself.
+ 
+This paradigm encourages reusability and helps us to group items under a specific type.
+ 
+In this article, we are going to look at some important concepts in the Object-Oriented paradigm namely;
+ 
+- Abstraction
+- Encapsulation
+- Inheritance
+- Polymorphism
+ 
+# Data Abstraction
+ 
+Abstraction is a way of preventing the internal data held by an object from being accessed by some external agent.
+This means that only methods of that class may access the data held by an object.
+In languages like _Java_, this is typically done by adding access specifiers like `private`, `public`, or even `protected`.
+ 
+Data Abstraction here is a [design pattern](https://en.wikipedia.org/wiki/Software_design_pattern).
+ 
+> It is worth noting that even methods can be abstracted in an object preventing direct access.
+ 
+# Encapsulation
+ 
+Encapsulation is sometimes confused with Data Abstraction mainly because they are centered around
+hiding stuff from a class. There is some sort of overlap here.
+ 
+Unlike abstraction, encapsulation is concerned with unifying together data, and the methods that act
+on that data under a single unit. This is usually to hide the way data is structured in the class.
+ 
+This means that the internal structure of data as described by the class might change but the user of the class
+need not be concerned by those changes as long as the method exposed by that class does the same operation.
+ 
+Encapsulation is applied to restrict the direct access to object data.
+ 
+# Inheritance
+ 
+This involves a class inheriting from another class.
+ 
+Let's consider the _Fruit_ class we described above.
+We might have a higher class named `LivingThing` from which our Fruit will extend.
+ 
+A living thing can _grow_, _eat_ and eventually die. Our fruit class, inheriting from the `LivingThing` class
+will therefore also be able to _grow_ & _eat_.
+ 
+In this context, we say `LivingThing` is a _super class_ or _parent class_ of `Fruit` while `Fruit` in itself is a _child class_ of `LivingThing`.
+ 
+# Polymorphism
+ 
+Polymorphism refers to providing a single generic view for objects of different types.
+This generic view is typically referred to as an [interface](<https://en.wikipedia.org/wiki/Interface_(computing)>).
+ 
+Looking at our `Fruit` example again, we know mangoes and watermelons both grow differently - but one thing is that they will both have a `grow()` method attached to them.
+ 
+This mechanism applies even during inheritance.
+This means that this `grow()` method may have been inherited from the `LivingThing` class even though it has different implementations.
+ 
+You have reached the end. If you want to learn about other design patterns, then consider [this article](/blog/programming-paradigms).
+ 
